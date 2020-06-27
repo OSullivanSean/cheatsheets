@@ -1,0 +1,528 @@
+####### DATA TYPES #######
+
+#int		Integer - Whole numbers
+#float	Numbers with decimal point: 1.23, 100.00 
+#str 	Ordered sequence of characters: "hello","1000"
+#list	Ordered sequence of objects: [10, "hello", 123.34]
+#dict	Unordered key/value pairs: {"key1":"value1", "name":"sean"}
+#tup		Ordered immutable sequence of objects: (10, "hello", 200.1)
+#set		Unordered collection of unique objects: {"a", "b"}
+#bool	true/false
+
+
+
+
+####### MATH #######
+
+#add			2+1
+#subtract	2-1
+#multiply	2*2
+#divide		3/2
+#modulus		3%2
+#power		2**3
+#BODMAS		(2+10)*(10+3)
+
+
+
+
+####### STRINGS #######
+
+#get the length of a string 			
+len(string)
+
+ordered sequence of characters so we can use indexing and slicing
+t = string[1]
+
+can also do reverse indexing from end of string
+v = "reverseIndex"[-10]
+
+#slicing [start:stop:step]
+#start index is inclusive, stop index is exclusive
+String = myString[2:]
+my = myString[:2]
+tri = myString[3:7]
+
+#stepping to get every third character(A)
+AAA = "ABCABCABC"[::3]
+
+#reverse a string
+gnirts = string[::-1]
+
+#concatenation
+Pam = 'P' + "Sam"[1:]
+
+#string multiplication
+zzzzzzzzzz = 'z' * 10
+
+#string functions (theres are many many more)
+UPPER = "Upper".upper()
+lower = "LOwEr".lower()
+split[] = "one,two,three".split(',')
+
+#string formatting
+"The {} {} {}".format("quick", "brown", "fox")
+"The {2} {1} {0}".format("fox", "brown", "quick"))
+"The {q} {b} {f}".format(f="fox", b="brown", q="quick")
+"%s, this is also an int in a string: %d" %("Hello",100)
+"A float with precision in a string {r:10.4f}".format(r=(100/777)))
+
+
+
+
+####### LISTS #######
+
+#lists are ordered, mutable and can contain different data types
+
+myList = ['one', 'two', 'three']
+
+#indexing
+one = numberList[0]
+
+#slicing
+['two', 'three'] = numberList[1:]
+['one', 'two'] = numberList[:1]
+
+#concatenation
+aList + anotherList
+
+numberList[0] = "one UPDATED"
+
+#append to list
+numberList.append("four")
+
+#pop item from end of list, removes it from the end of the list and returns value
+numberList.pop()
+print("concatList: ", concatList)
+
+#remove from specific index
+numberList.pop(0)
+
+#sort a list - method sorts the list in place and returns nothing
+aList.sort()
+
+#reverse a list - method sorts the list in place and returns nothing
+aList.reverse()
+
+#nested lists
+aList = [[1, 2], ['three', 4]]
+ONE = aList[0, 0]
+THREE = aList[1, 0]
+
+
+
+
+####### DICTIONARIES #######
+
+#create a dictionary(basically a map)
+myDict = {'key1':'value1', 'key2':'value2'}
+
+#grab value at certain key
+myDict['key2']
+
+#add new/replace entry
+myDict['key3'] = 'value3'
+
+#get list of keys/values/pairs
+myDict.keys()
+myDict.values()
+myDict.items() # returns list of tuples
+
+
+
+
+####### TUPLES #######
+
+#immutable lists, uses parentheses() instead of braces[], can mix object types
+
+aTuple = (1,2,3)
+aList = [1,2,3]
+
+#all indexing and slicing from lists applies
+TWO = aTuple[1]
+
+#count number of occurences and get index(of first occurence) of a value
+THREE = ('a', 'a', 'a', 'b').count('a')
+ZERO = ('a', 'a', 'a', 'b').index('a')
+
+
+
+
+####### SETS #######
+
+#unordered, unique
+
+#create and add
+aSet = set()
+aSet.add('value')
+
+#cast list to set to get unique values
+myList = [1,1,1,1,1,2,2,2,2,3,3,3,3]
+mySet = set(myList)
+
+
+
+
+####### BOOLEANS #######
+
+#True or False or None
+
+
+
+
+####### FILE I/O #######
+
+#create an object that represents the file
+myFile = open("myFile.txt")
+
+#put contents of the file into a string - this works with a cursor
+contents = myFile.read()
+
+#return cursor to start of file
+myFile.seek(0)
+
+#put lines into a list
+lines = myFile.readLines
+
+#write line to file
+myFile.write('string to write')
+
+#manually close the file
+myFile.close()
+
+#try with resources - close file automatically
+with open("myFile.txt") as myFile:
+	contents = myFile.read()
+
+#modes
+with open("myFile.txt", mode='r') as myFile:
+	...
+
+mode='r'	read
+mode='w'	overwrite or create new
+mode='a'	append
+mode='r+'	read write
+mode='w+'	write read (overwrites existing file or creates new one)
+
+
+
+
+####### COMPARISON OPERATORS #######
+
+==		equality
+!=		inequality
+>		greater than
+<		less than
+>=		greater/equal to
+<=		less/equal to
+
+
+
+
+####### LOGICAL OPERATORS #######
+
+AND
+OR
+NOT
+
+
+
+
+####### LOGIC STATEMENTS #######
+
+if condition:
+	code ...
+elif anotherCondition:
+	code ...
+else:
+	code ...
+
+
+
+
+####### FOR LOOPS #######
+
+for item in iterableObject:
+	code ...
+
+#string iteration
+for letter in "Hello World":
+	code...
+
+#tuple unpacking
+tupleList = [(1,2), (3,4), (5,6)]
+for a,b in tupleList:
+	print(a)
+	print(b)
+
+#iterating dict will give keys by default
+for item in myDict:
+	code ...
+
+#iterating dict key/value pairs
+for item in myDict.items():
+	code ...
+
+
+
+
+####### WHILE LOOPS #######
+
+while condition:
+	code ...
+else:
+	code ...
+
+#keywords
+break 		break out of current loop
+continue	finish current iteration and continue to next
+pass 		do nothing (usually kept as a placeholder)
+
+
+
+
+####### OTHER USEFUL OPERATIONS #######
+
+#range - 0-10
+for num in range(10):
+	print num
+
+#range - (start, stop, stepsize)
+for num in range(0,10,2):
+	print(num)
+
+
+#enumerate - generates list of tuples (index, element) for each letter ie [(1,'a'),(2,'b')...]
+for index,element in enumerate('abcde'):
+	print(index)
+	print(element)
+
+#zip - opposite of enumerate, zips together multiple lists creating tuples pairing each in matching index ie [(1,'a',100), (2,'b',200)...]. This will not include any extra indexes that are not present in all
+list1 = [1,2,3]
+list2 = ['a','b','c']
+list3 = [100,200,300]
+for item in zip(list1, list2):
+	print(item)
+
+#in - checks in list contains a value
+'x' in ['a', 'b', 'c', 'x']
+'o' in 'Hello World'
+'key1' in {'key1':100}
+'value1' in aDict.values()
+
+#min/max
+min(numList)
+max(numList)
+
+#Randomize a list - in place, returns None 
+from random import shuffle
+shuffle(aList)
+
+#Random number
+from random import randint
+randint(0,100)
+
+#User input - accepts everything as a string
+result = input('promt text:')
+
+#Convert string number to integer/float
+int('10')
+float('1.23')
+
+#Join list of characters to make a string
+myList = ['h', 'e', 'l', 'l', 'o']
+''.join(myList)
+
+
+
+####### LIST COMPREHENSIONS #######
+
+#put each letter in a string into a list
+myList = [letter for letter in myString]
+
+#put each number in range 0 - 10 in a list
+myList = [num for num in range(0, 11)]
+
+#put each number in range 0 - 10 squared in a list
+myList = [num**2 for num in range(0,11)]
+
+#conditional list creation - put all even numbers in range 0 - 11 in a list
+myList = [num for num in range(0,11) if num%2==0]
+
+#use case - converting a list of temperatures in celcius to fahrenheit
+celcius = [0, 10, 20, 34.5]
+fahrenheit = [((9/5)*temp + 32) for temp in celcius]
+
+
+
+
+####### FUNCTIONS #######
+
+#define a function
+def functionName(param = 'defaultValue'):
+	code...
+	return returnVariable
+
+#call a function
+functionName(param)
+
+#call fucntion specifying input params
+functionName(param2 = value2, param1 = value1)
+
+
+
+
+####### *ARGS AND **KWARGS #######
+
+# *args - pass in as many arg as you want. 'args' will be treated as a tuple
+def myfunc(*args):
+	for item in args:
+		print(item)
+
+#usage
+myfunc('one', 'two', 3, 4.0)
+
+
+# **kwargs - pass in args with keyword. 'kwargs' will be treated as a dictionary
+def myfunc(**kwargs):
+	if kwargs['name'] == 'sean':
+		print kwargs['age']
+
+#usage
+myfunc(name='sean', age=30)
+
+
+
+
+####### MAP #######
+
+#map takes a function and applies it to each of the items in an iterable
+map(func, *iterables)
+
+def square(num):
+	return num**2
+
+numList = [1,2,3,4,5]
+
+#call map in a for loop to apply function to each
+for item in map(square, numList):
+	print(item)
+
+#call map to return a list
+list(map(square, numList))
+
+
+
+
+####### FILTER #######
+
+#returns subset iterable of values that passed fitler condition
+
+def checkEven(num):
+	return num%2 == 0
+
+numList = [1,2,3,4,5]
+
+list(filter(checkEven, numList))
+
+
+
+
+####### LAMBDA #######
+
+#normal function
+def square(num):
+	return num**2
+
+#lambda equivalent (can be assigned to a variable)
+myLambda = lambda num: num**2
+
+#usage (map)
+list(map(lambda num:num**2, numList))
+
+#usage (filter)
+list(filter(lambda num:num%2==0, numList))
+
+#usage - grab first letter of each word in list
+map(lambda s:s[0], names)
+
+
+
+
+####### CLASS #######
+
+#create a class
+class Dog():
+	
+	#class object attribute (static)
+	species = 'mammal'
+
+	def __init__(self, breed, name='defaultDog'): #constructor
+		self.breed = breed
+		self.name = name
+
+	def bark(self):
+		print(self.name + " barks!")
+
+
+
+
+####### OOP #######
+
+#superclass
+class Animal():
+	def __init__(self):
+		print("Animal created")
+
+	def whoAmI(self):
+		print("I am an animal")
+
+	def speak(self): #abstract method
+		raise NotImplementedError("Subclass must implement this abstract method")
+
+#subclass
+class Dog(Animal):
+	species = 'mammal' #class object attribute (static)
+
+	def __init__(self, breed, name='defaultDog'):
+		Animal.__init__(self) #call superclass constructor
+		self.breed = breed
+		self.name = name
+	
+	def whoAmI(self): #overwrite methods
+		print("I am a dog")
+
+	def speak(self): #implement abstract method
+		print(self.name + " barks!")
+
+	def __str__: #implement toString
+		return "string representation of dog"
+
+	def __del__: #implement del
+		...do something when object is deleted from memory
+
+#instantiate the class (self if implicit)
+dog = Dog(breed='Collie', name='Doge')
+
+#get attribute value (no encapsulation)
+dog.breed
+
+#call methods (self is implicit)
+dog.speak()
+
+#remove object from memory
+del dog
+
+
+
+
+####### INSTALL MODULES/PACKAGES #######
+
+#Module = .py script called in another .py script
+#Package = collection of modules
+
+#install
+pip install requests
+
+#import modules
+from colorama import Fore
+
