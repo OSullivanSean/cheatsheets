@@ -16,6 +16,11 @@ ng serve --open
 # generate component - creates a folder with corresponding ts, html and css files and adds the component to the app.module.ts file
 ng generate component new-component
 
+# data types
+let decimal: number = 6;
+let done: boolean = false;
+let color: string = "blue";
+
 # object classes
 export interface Hero {
   id: number;
