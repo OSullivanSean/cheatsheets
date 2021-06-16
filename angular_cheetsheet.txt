@@ -1,1 +1,16 @@
+# install nodejs
+https://nodejs.org/
+
+# install angular cli using node package manager (npm)
+npm install -g @angular/cli
+
+# create new project
+ng new my-app
+
+# build the app
+ng build
+
+# serve app and open in default browser
+ng serve --open
+
 
