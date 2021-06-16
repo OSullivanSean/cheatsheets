@@ -13,4 +13,5 @@ ng build
 # serve app and open in default browser
 ng serve --open
 
-
+# generate component
+ng generate component new-component
