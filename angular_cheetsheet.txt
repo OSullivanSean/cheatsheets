@@ -13,5 +13,19 @@ ng build
 # serve app and open in default browser
 ng serve --open
 
-# generate component
+# generate component - creates a folder with corresponding ts, html and css files and adds the component to the app.module.ts file
 ng generate component new-component
+
+# object classes
+export interface Hero {
+  id: number;
+  name: string;
+}
+
+# instatiation of objects
+hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  };
+  
+
